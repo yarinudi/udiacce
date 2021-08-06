@@ -61,6 +61,5 @@ var/
 iOS/
 macOS/
 windows/
-android/
 linux/
 django/
