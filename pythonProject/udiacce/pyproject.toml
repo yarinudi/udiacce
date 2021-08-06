@@ -1,0 +1,52 @@
+[tool.briefcase]
+project_name = "UdiAcce"
+bundle = "com.example"
+version = "0.0.1"
+url = "https://example.com/udiacce"
+license = "BSD license"
+author = 'Ofek&Yarin'
+author_email = "yarinudi@mail.tau.ac.il"
+
+[tool.briefcase.app.udiacce]
+formal_name = "UdiAcce"
+description = "My first application"
+icon = "src/udiacce/resources/udiacce"
+sources = ['src/udiacce']
+requires = []
+
+
+[tool.briefcase.app.udiacce.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.udiacce.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev20',
+    'rubicon-java',
+]
+
+system_requires = [
+    'libgirepository1.0-dev',
+    'libcairo2-dev',
+    'libpango1.0-dev',
+    'libwebkitgtk-3.0-0',
+    'gir1.2-webkit-3.0',
+]
+
+[tool.briefcase.app.udiacce.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev20',
+]
+
+# Mobile deployments
+[tool.briefcase.app.udiacce.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.udiacce.android]
+requires = [
+    'toga-android>=0.3.0.dev20',
+    'rubicon-java',
+]
